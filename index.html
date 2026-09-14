@@ -4,54 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SkillBridge AI | Learning Paths</title>
+    <title>SkillBridge AI</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
 </head>
 
 <body>
 
 <!-- ================= NAVBAR ================= -->
 
-<nav class="navbar">
+<header class="navbar">
 
-    <div class="logo">
-        <div class="logo-icon">
+    <div class="brand">
+
+        <div class="brand-icon">
             <i class="fa-solid fa-link"></i>
         </div>
 
         <div>
-            <h2>SkillBridge <span>AI</span></h2>
-            <small>Academia • Skills • Industry</small>
+            <div class="brand-name">
+                SkillBridge <span>AI</span>
+            </div>
+
+            <div class="brand-subtitle">
+                Academia • Skills • Industry
+            </div>
         </div>
+
     </div>
 
-    <div class="nav-links">
-        <a href="#career">Career Match</a>
+    <nav>
+        <a href="#career-match">Career Match</a>
         <a href="#roadmap">Roadmap</a>
         <a href="#courses">Courses</a>
-        <a href="#assessments">Assessments</a>
+    </nav>
+
+    <div class="profile">
+        <i class="fa-solid fa-user"></i>
     </div>
 
-    <button class="profile-btn">
-        <i class="fa-solid fa-user"></i>
-    </button>
-
-</nav>
+</header>
 
 
 <!-- ================= HERO ================= -->
 
-<section class="hero" id="career">
+<section class="hero">
 
     <div class="hero-content">
 
-        <div class="ai-label">
+        <div class="ai-badge">
             <i class="fa-solid fa-wand-magic-sparkles"></i>
             AI POWERED LEARNING
         </div>
@@ -62,20 +66,20 @@
         </h1>
 
         <p>
-            Tell SkillBridge AI your career goal and get a personalized
-            learning path with courses, projects and assessments.
+            Tell SkillBridge AI your career goals and get a personalized
+            learning path with courses, projects and opportunities.
         </p>
 
-        <div class="career-search">
 
-            <i class="fa-solid fa-magnifying-glass"></i>
+        <!-- Career Selector -->
 
-            <input
-                type="text"
-                id="careerInput"
-                placeholder="Example: Full Stack Developer"
-                value="Full Stack Developer"
-            >
+        <div class="career-selector">
+
+            <div class="selected-careers" id="selectedCareers">
+                <span class="placeholder">
+                    Select up to 3 career goals
+                </span>
+            </div>
 
             <button id="generateBtn">
                 Generate Path
@@ -84,57 +88,81 @@
 
         </div>
 
-        <div class="suggestions">
+        <div class="selection-info">
+            You can select <b>1 to 3</b> career goals
+        </div>
 
-            <span>Popular:</span>
 
-            <button class="suggestion" data-role="Full Stack Developer">
+        <!-- Career Options -->
+
+        <div class="career-options">
+
+            <button class="career-chip" data-career="Full Stack Developer">
                 Full Stack Developer
             </button>
 
-            <button class="suggestion" data-role="AI Engineer">
+            <button class="career-chip" data-career="AI Engineer">
                 AI Engineer
             </button>
 
-            <button class="suggestion" data-role="Data Scientist">
+            <button class="career-chip" data-career="Data Scientist">
                 Data Scientist
             </button>
 
-            <button class="suggestion" data-role="Cybersecurity Analyst">
+            <button class="career-chip" data-career="Cybersecurity Analyst">
                 Cybersecurity
+            </button>
+
+            <button class="career-chip" data-career="Frontend Developer">
+                Frontend Developer
+            </button>
+
+            <button class="career-chip" data-career="Backend Developer">
+                Backend Developer
+            </button>
+
+            <button class="career-chip" data-career="Machine Learning Engineer">
+                ML Engineer
+            </button>
+
+            <button class="career-chip" data-career="Data Analyst">
+                Data Analyst
             </button>
 
         </div>
 
     </div>
 
-    <div class="hero-visual">
+
+    <!-- Hero graphic -->
+
+    <div class="hero-graphic">
 
         <div class="orbit orbit-one"></div>
         <div class="orbit orbit-two"></div>
+        <div class="orbit orbit-three"></div>
 
-        <div class="ai-core">
+        <div class="career-center">
+
             <i class="fa-solid fa-brain"></i>
 
-            <div class="core-text">
-                <strong>AI</strong>
-                <span>Career Match</span>
-            </div>
+            <span>Career Match</span>
+
         </div>
 
-        <div class="floating-node node-one">
+        <div class="floating-card skills-card">
             <i class="fa-solid fa-code"></i>
-            <span>Skills</span>
+            Skills
         </div>
 
-        <div class="floating-node node-two">
-            <i class="fa-solid fa-book"></i>
-            <span>Courses</span>
-        </div>
-
-        <div class="floating-node node-three">
+        <div class="floating-card projects-card">
             <i class="fa-solid fa-diagram-project"></i>
-            <span>Projects</span>
+            Projects
+        </div>
+
+        <div class="floating-card courses-card">
+            <i class="fa-solid fa-book"></i>
+            Courses
         </div>
 
     </div>
@@ -142,22 +170,23 @@
 </section>
 
 
-<!-- ================= AI MATCH ================= -->
 
-<section class="ai-match-section">
+<!-- ================= CAREER MATCH ================= -->
+
+<section class="section" id="career-match">
 
     <div class="section-heading">
 
-        <span class="section-tag">
+        <div class="section-label">
             <i class="fa-solid fa-robot"></i>
             AI ANALYSIS
-        </span>
+        </div>
 
         <h2>Your Career Match</h2>
 
         <p>
-            SkillBridge AI maps your career goal to the skills,
-            courses, projects and assessments you need.
+            SkillBridge AI maps your career goals to the skills,
+            courses and projects you need.
         </p>
 
     </div>
@@ -165,50 +194,42 @@
 
     <div class="match-card">
 
-        <div class="match-info">
+        <div class="match-content">
 
-            <span class="recommendation-label">
+            <div class="small-title">
                 AI RECOMMENDATION
-            </span>
+            </div>
 
-            <h2 id="careerTitle">
+            <h3 id="matchTitle">
                 Full Stack Developer
-            </h2>
+            </h3>
 
-            <p id="careerDescription">
+            <p id="matchDescription">
                 Build modern web applications by mastering frontend,
                 backend, databases and deployment.
             </p>
 
-            <div class="skill-list" id="skillList"></div>
+            <div class="skill-tags" id="skillTags">
+
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>Node.js</span>
+                <span>SQL</span>
+                <span>Git & GitHub</span>
+                <span>APIs</span>
+
+            </div>
 
         </div>
 
 
-        <div class="score-area">
+        <div class="score-container">
 
             <div class="score-circle">
 
-                <svg viewBox="0 0 120 120">
-
-                    <circle
-                        class="score-bg"
-                        cx="60"
-                        cy="60"
-                        r="52"
-                    ></circle>
-
-                    <circle
-                        class="score-progress"
-                        id="scoreProgress"
-                        cx="60"
-                        cy="60"
-                        r="52"
-                    ></circle>
-
-                </svg>
-
-                <div class="score-number">
+                <div>
                     <strong id="matchScore">95</strong>
                     <span>%</span>
                 </div>
@@ -224,16 +245,17 @@
 </section>
 
 
+
 <!-- ================= ROADMAP ================= -->
 
-<section class="roadmap-section" id="roadmap">
+<section class="section roadmap-section" id="roadmap">
 
     <div class="section-heading">
 
-        <span class="section-tag">
+        <div class="section-label">
             <i class="fa-solid fa-route"></i>
             PERSONALIZED ROADMAP
-        </span>
+        </div>
 
         <h2>Your Learning Journey</h2>
 
@@ -245,38 +267,118 @@
     </div>
 
 
-    <div class="roadmap-container" id="roadmapContainer">
+    <div class="roadmap">
 
-        <!-- JavaScript creates roadmap -->
+        <div class="roadmap-line"></div>
+
+
+        <div class="roadmap-step active">
+
+            <div class="step-icon">
+                <i class="fa-solid fa-book-open"></i>
+            </div>
+
+            <h3>Fundamentals</h3>
+
+            <p>Core concepts & basics</p>
+
+        </div>
+
+
+        <div class="roadmap-step">
+
+            <div class="step-icon">
+                <i class="fa-solid fa-code"></i>
+            </div>
+
+            <h3>Programming</h3>
+
+            <p>Languages & problem solving</p>
+
+        </div>
+
+
+        <div class="roadmap-step">
+
+            <div class="step-icon">
+                <i class="fa-solid fa-laptop-code"></i>
+            </div>
+
+            <h3>Development</h3>
+
+            <p>Build practical applications</p>
+
+        </div>
+
+
+        <div class="roadmap-step">
+
+            <div class="step-icon">
+                <i class="fa-solid fa-database"></i>
+            </div>
+
+            <h3>Data & Tools</h3>
+
+            <p>Databases, Git & APIs</p>
+
+        </div>
+
+
+        <div class="roadmap-step">
+
+            <div class="step-icon">
+                <i class="fa-solid fa-diagram-project"></i>
+            </div>
+
+            <h3>Projects</h3>
+
+            <p>Real-world project practice</p>
+
+        </div>
+
+
+        <div class="roadmap-step">
+
+            <div class="step-icon">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+            </div>
+
+            <h3>Opportunity</h3>
+
+            <p>Internships & jobs</p>
+
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- ================= COURSE EXPLORER ================= -->
 
-<section class="courses-section" id="courses">
+<!-- ================= COURSES ================= -->
+
+<section class="section courses-section" id="courses">
 
     <div class="section-heading">
 
-        <span class="section-tag">
+        <div class="section-label">
             <i class="fa-solid fa-graduation-cap"></i>
             COURSE EXPLORER
-        </span>
+        </div>
 
-        <h2>Find the Right Course</h2>
+        <h2>Courses for Your Career</h2>
 
         <p>
-            Search and filter learning resources based on your career goal.
+            Discover free and paid learning opportunities from
+            government, university and industry platforms.
         </p>
 
     </div>
 
 
-    <!-- COURSE SEARCH -->
+    <!-- Search -->
 
-    <div class="course-search-box">
+    <div class="course-search">
 
         <i class="fa-solid fa-magnifying-glass"></i>
 
@@ -289,434 +391,168 @@
     </div>
 
 
-    <!-- COURSE FILTERS -->
+    <!-- Filters -->
 
-    <div class="course-filters">
+    <div class="filters">
 
-        <button class="filter-btn active" data-filter="all">
+        <button class="filter active" data-filter="all">
             All
         </button>
 
-        <button class="filter-btn" data-filter="free">
-            <i class="fa-solid fa-gift"></i>
+        <button class="filter" data-filter="free">
             Free
         </button>
 
-        <button class="filter-btn" data-filter="paid">
-            <i class="fa-solid fa-credit-card"></i>
+        <button class="filter" data-filter="paid">
             Paid
         </button>
 
-        <button class="filter-btn" data-filter="government">
-            <i class="fa-solid fa-building-columns"></i>
+        <button class="filter" data-filter="government">
             Government
         </button>
 
-        <button class="filter-btn" data-filter="university">
-            <i class="fa-solid fa-university"></i>
+        <button class="filter" data-filter="university">
             University
         </button>
 
-        <button class="filter-btn" data-filter="industry">
-            <i class="fa-solid fa-building"></i>
+        <button class="filter" data-filter="industry">
             Industry
+        </button>
+
+        <button class="filter" data-filter="online">
+            Online
+        </button>
+
+        <button class="filter" data-filter="offline">
+            Offline
         </button>
 
     </div>
 
 
-    <div class="recommendation-line">
+    <!-- Course Count -->
 
-        <span>
-            <i class="fa-solid fa-sparkles"></i>
-            Recommended for:
-        </span>
-
-        <strong id="recommendedCareer">
-            Full Stack Developer
-        </strong>
-
+    <div class="course-result-info">
+        Showing <span id="courseCount">0</span> courses
     </div>
 
 
-    <!-- COURSE GRID -->
+    <!-- Course Grid -->
 
-    <div class="course-grid" id="courseGrid">
-
-        <!-- JavaScript generates courses -->
-
-    </div>
+    <div class="course-grid" id="courseGrid"></div>
 
 
-    <div class="empty-state" id="emptyState">
-
+    <div class="no-courses" id="noCourses">
         <i class="fa-solid fa-magnifying-glass"></i>
-
         <h3>No courses found</h3>
-
-        <p>
-            Try another search or change your filters.
-        </p>
-
+        <p>Try another search or filter.</p>
     </div>
 
 </section>
 
-
-<!-- ================= ASSESSMENT SECTION ================= -->
-
-<section class="assessment-section" id="assessments">
-
-    <div class="section-heading">
-
-        <span class="section-tag">
-            <i class="fa-solid fa-clipboard-check"></i>
-            SKILL VERIFICATION
-        </span>
-
-        <h2>Assessments That Prove Your Skills</h2>
-
-        <p>
-            Students can verify their knowledge through online or
-            offline assessments.
-        </p>
-
-    </div>
-
-
-    <div class="assessment-grid">
-
-        <!-- ONLINE -->
-
-        <div class="assessment-card">
-
-            <div class="assessment-icon">
-                <i class="fa-solid fa-laptop"></i>
-            </div>
-
-            <span class="assessment-type">
-                ONLINE
-            </span>
-
-            <h3>Online Assessment</h3>
-
-            <p>
-                Take assessments from anywhere and receive
-                instant results where automatic evaluation is supported.
-            </p>
-
-            <ul>
-
-                <li>
-                    <i class="fa-solid fa-check"></i>
-                    MCQ Tests
-                </li>
-
-                <li>
-                    <i class="fa-solid fa-check"></i>
-                    Coding Tests
-                </li>
-
-                <li>
-                    <i class="fa-solid fa-check"></i>
-                    Project Submission
-                </li>
-
-                <li>
-                    <i class="fa-solid fa-check"></i>
-                    Automatic Evaluation
-                </li>
-
-            </ul>
-
-            <div class="security-box">
-
-                <i class="fa-solid fa-shield-halved"></i>
-
-                <div>
-                    <strong>Anti-Cheating</strong>
-                    <small>
-                        Timer • Full Screen • Tab Detection • Random Questions
-                    </small>
-                </div>
-
-            </div>
-
-            <button
-                class="assessment-btn"
-                onclick="startAssessment('online')"
-            >
-                Start Online Assessment
-                <i class="fa-solid fa-arrow-right"></i>
-            </button>
-
-        </div>
-
-
-        <!-- OFFLINE -->
-
-        <div class="assessment-card">
-
-            <div class="assessment-icon">
-                <i class="fa-solid fa-school"></i>
-            </div>
-
-            <span class="assessment-type">
-                OFFLINE
-            </span>
-
-            <h3>Offline Assessment</h3>
-
-            <p>
-                Attend a physical assessment center for written,
-                practical or proctored evaluation.
-            </p>
-
-            <ul>
-
-                <li>
-                    <i class="fa-solid fa-check"></i>
-                    Written Test
-                </li>
-
-                <li>
-                    <i class="fa-solid fa-check"></i>
-                    Practical Test
-                </li>
-
-                <li>
-                    <i class="fa-solid fa-check"></i>
-                    Proctored Assessment
-                </li>
-
-                <li>
-                    <i class="fa-solid fa-check"></i>
-                    Mentor Evaluation
-                </li>
-
-            </ul>
-
-            <div class="security-box">
-
-                <i class="fa-solid fa-location-dot"></i>
-
-                <div>
-                    <strong>Assessment Centers</strong>
-                    <small>
-                        Choose an available center near you
-                    </small>
-                </div>
-
-            </div>
-
-            <button
-                class="assessment-btn"
-                onclick="startAssessment('offline')"
-            >
-                Find Assessment Center
-                <i class="fa-solid fa-arrow-right"></i>
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
 
 
 <!-- ================= NEXT MOVE ================= -->
 
 <section class="next-move">
 
-    <div class="next-content">
+    <div>
 
-        <span class="section-tag">
-            <i class="fa-solid fa-bolt"></i>
+        <div class="section-label light-label">
+            <i class="fa-solid fa-rocket"></i>
             YOUR NEXT MOVE
-        </span>
+        </div>
 
-        <h2>Learn → Practice → Prove → Connect</h2>
+        <h2>
+            Learn → Practice → Build → Connect
+        </h2>
 
         <p>
-            Complete courses, build projects, verify your skills
-            and connect with industry opportunities.
+            Turn your learning journey into real career opportunities.
         </p>
 
-    </div>
-
-    <div class="next-steps">
-
-        <div>
-            <span>01</span>
-            <strong>Learn</strong>
-        </div>
-
-        <div>
-            <span>02</span>
-            <strong>Practice</strong>
-        </div>
-
-        <div>
-            <span>03</span>
-            <strong>Prove</strong>
-        </div>
-
-        <div>
-            <span>04</span>
-            <strong>Connect</strong>
-        </div>
+        <a href="#opportunities" class="opportunity-btn">
+            <span>Explore Opportunities</span>
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
 
     </div>
 
 </section>
 
 
-<!-- ================= COURSE MODAL ================= -->
 
-<div class="modal-overlay" id="courseModal">
+<!-- ================= OPPORTUNITIES ================= -->
 
-    <div class="course-modal">
+<section class="opportunities" id="opportunities">
 
-        <button
-            class="modal-close"
-            onclick="closeCourseModal()"
-        >
-            <i class="fa-solid fa-xmark"></i>
-        </button>
+    <div class="section-heading">
 
-
-        <div class="modal-top">
-
-            <div class="modal-platform-icon" id="modalPlatformIcon">
-                <i class="fa-solid fa-graduation-cap"></i>
-            </div>
-
-            <div>
-
-                <span id="modalPlatform">
-                    SWAYAM
-                </span>
-
-                <h2 id="modalTitle">
-                    Full Stack Web Development
-                </h2>
-
-                <div class="modal-meta">
-
-                    <span id="modalType">
-                        FREE
-                    </span>
-
-                    <span id="modalLevel">
-                        Beginner
-                    </span>
-
-                    <span id="modalDuration">
-                        12 Weeks
-                    </span>
-
-                </div>
-
-            </div>
-
+        <div class="section-label">
+            <i class="fa-solid fa-briefcase"></i>
+            CAREER OPPORTUNITIES
         </div>
 
+        <h2>Ready for the Next Step?</h2>
 
-        <div class="modal-content">
+        <p>
+            Explore internships, projects and job opportunities
+            after completing your learning path.
+        </p>
 
-            <!-- LEARN -->
-
-            <div class="detail-block">
-
-                <div class="detail-heading">
-
-                    <i class="fa-solid fa-book-open"></i>
-
-                    <h3>What You'll Learn</h3>
-
-                </div>
-
-                <ul id="modalLearn"></ul>
-
-            </div>
+    </div>
 
 
-            <!-- PROJECTS -->
+    <div class="opportunity-grid">
 
-            <div class="detail-block">
+        <div class="opportunity-card">
 
-                <div class="detail-heading">
+            <i class="fa-solid fa-building"></i>
 
-                    <i class="fa-solid fa-diagram-project"></i>
+            <h3>Internships</h3>
 
-                    <h3>
-                        Projects
-                        <span id="modalProjectCount"></span>
-                    </h3>
+            <p>
+                Find industry internships matching your skills.
+            </p>
 
-                </div>
-
-                <div
-                    class="project-list"
-                    id="modalProjects"
-                ></div>
-
-            </div>
-
-
-            <!-- ASSESSMENTS -->
-
-            <div class="detail-block">
-
-                <div class="detail-heading">
-
-                    <i class="fa-solid fa-clipboard-check"></i>
-
-                    <h3>Assessments</h3>
-
-                </div>
-
-                <div
-                    class="assessment-summary"
-                    id="modalAssessments"
-                ></div>
-
-            </div>
-
-
-            <!-- COMPLETION -->
-
-            <div class="detail-block">
-
-                <div class="detail-heading">
-
-                    <i class="fa-solid fa-circle-check"></i>
-
-                    <h3>Completion Requirements</h3>
-
-                </div>
-
-                <ul id="modalRequirements"></ul>
-
-            </div>
-
-        </div>
-
-
-        <div class="modal-footer">
-
-            <button
-                class="secondary-btn"
-                onclick="closeCourseModal()"
-            >
-                Close
+            <button>
+                Explore Internships
+                <i class="fa-solid fa-arrow-right"></i>
             </button>
 
-            <button
-                class="primary-btn"
-                id="startCourseBtn"
-            >
-                Start Learning
+        </div>
+
+
+        <div class="opportunity-card">
+
+            <i class="fa-solid fa-diagram-project"></i>
+
+            <h3>Industry Projects</h3>
+
+            <p>
+                Work on real-world company problems and projects.
+            </p>
+
+            <button>
+                Explore Projects
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+
+        <div class="opportunity-card">
+
+            <i class="fa-solid fa-briefcase"></i>
+
+            <h3>Jobs</h3>
+
+            <p>
+                Discover opportunities based on your career skills.
+            </p>
+
+            <button>
+                Explore Jobs
                 <i class="fa-solid fa-arrow-right"></i>
             </button>
 
@@ -724,32 +560,163 @@
 
     </div>
 
-</div>
+</section>
 
 
-<!-- ================= TOAST ================= -->
 
-<div class="toast" id="toast">
+<!-- ================= COURSE MODAL ================= -->
 
-    <i class="fa-solid fa-circle-check"></i>
+<div class="modal" id="courseModal">
 
-    <span id="toastText">
-        Action completed
-    </span>
+    <div class="modal-box">
+
+        <button class="close-modal" id="closeModal">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <div class="modal-platform" id="modalPlatform">
+            NPTEL
+        </div>
+
+        <h2 id="modalTitle">
+            Course Title
+        </h2>
+
+
+        <div class="modal-meta">
+
+            <span id="modalType">FREE</span>
+            <span id="modalMode">ONLINE</span>
+            <span id="modalDuration">12 Weeks</span>
+            <span id="modalLevel">Beginner</span>
+
+        </div>
+
+
+        <p class="modal-description" id="modalDescription">
+            Course description.
+        </p>
+
+
+        <div class="modal-grid">
+
+
+            <div class="detail-box">
+
+                <h3>
+                    <i class="fa-solid fa-book"></i>
+                    What You'll Learn
+                </h3>
+
+                <ul id="modalLearn"></ul>
+
+            </div>
+
+
+            <div class="detail-box">
+
+                <h3>
+                    <i class="fa-solid fa-diagram-project"></i>
+                    Projects
+                </h3>
+
+                <ul id="modalProjects"></ul>
+
+            </div>
+
+
+            <div class="detail-box">
+
+                <h3>
+                    <i class="fa-solid fa-list-check"></i>
+                    Assignments
+                </h3>
+
+                <p id="modalAssignment"></p>
+
+            </div>
+
+
+            <div class="detail-box">
+
+                <h3>
+                    <i class="fa-solid fa-certificate"></i>
+                    Certification
+                </h3>
+
+                <p id="modalCertification"></p>
+
+            </div>
+
+
+            <div class="detail-box">
+
+                <h3>
+                    <i class="fa-solid fa-pen"></i>
+                    Examination Mode
+                </h3>
+
+                <p id="modalExam"></p>
+
+            </div>
+
+
+            <div class="detail-box">
+
+                <h3>
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                    Fee
+                </h3>
+
+                <p id="modalFee"></p>
+
+            </div>
+
+        </div>
+
+
+        <div class="skills-modal">
+
+            <h3>Skills</h3>
+
+            <div id="modalSkills"></div>
+
+        </div>
+
+
+        <div class="requirements">
+
+            <h3>Completion Requirements</h3>
+
+            <p id="modalRequirements"></p>
+
+        </div>
+
+
+        <button class="start-learning" id="startLearning">
+            Start Learning
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+    </div>
 
 </div>
 
 
 <footer>
 
-    <div>
-        <strong>SkillBridge <span>AI</span></strong>
-        <p>
-            Bridging Academia, Skills and Industry.
-        </p>
+    <div class="footer-brand">
+        SkillBridge <span>AI</span>
     </div>
 
-    <p>© 2026 SkillBridge AI • Demo Prototype</p>
+    <p>
+        Academia • Skills • Industry
+    </p>
+
+    <p class="copyright">
+        © 2026 SkillBridge AI
+    </p>
 
 </footer>
 
