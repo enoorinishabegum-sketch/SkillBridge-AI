@@ -1,20 +1,17 @@
-/* =====================================================
+/* =========================================================
    SKILLBRIDGE AI
-   LEARNING PATH + COURSE EXPLORER
-===================================================== */
+   ========================================================= */
 
 
-/* =====================================================
-   CAREER DATABASE
-===================================================== */
+/* =========================================================
+   CAREER DATA
+   ========================================================= */
 
-const careerDatabase = {
+const careerData = {
 
-    "full stack developer": {
+    "Full Stack Developer": {
 
-        title: "Full Stack Developer",
-
-        match: 95,
+        score: 95,
 
         description:
             "Build modern web applications by mastering frontend, backend, databases and deployment.",
@@ -28,28 +25,17 @@ const careerDatabase = {
             "SQL",
             "Git & GitHub",
             "APIs"
-        ],
-
-        roadmap: [
-            ["Fundamentals", "HTML, CSS & Web Basics"],
-            ["JavaScript", "Programming & DOM"],
-            ["Frontend", "React & UI Development"],
-            ["Backend", "Node.js & APIs"],
-            ["Database", "SQL & Data Management"],
-            ["Deploy", "Git, Cloud & Production"]
         ]
 
     },
 
 
-    "frontend developer": {
+    "Frontend Developer": {
 
-        title: "Frontend Developer",
-
-        match: 93,
+        score: 93,
 
         description:
-            "Create responsive and interactive user interfaces for modern web applications.",
+            "Create responsive and interactive user interfaces using modern frontend technologies.",
 
         skills: [
             "HTML",
@@ -57,119 +43,98 @@ const careerDatabase = {
             "JavaScript",
             "React",
             "Responsive Design",
-            "Git"
-        ],
-
-        roadmap: [
-            ["HTML & CSS", "Web foundations"],
-            ["JavaScript", "Interactive websites"],
-            ["Responsive UI", "Mobile-first design"],
-            ["React", "Component development"],
-            ["Projects", "Build real interfaces"],
-            ["Portfolio", "Show your skills"]
+            "Git",
+            "UI Development"
         ]
 
     },
 
 
-    "backend developer": {
+    "Backend Developer": {
 
-        title: "Backend Developer",
-
-        match: 91,
+        score: 91,
 
         description:
-            "Build secure and scalable server-side applications, APIs and databases.",
+            "Develop scalable server-side applications, APIs, databases and backend systems.",
 
         skills: [
-            "Python",
-            "Java",
+            "JavaScript",
             "Node.js",
+            "Python",
+            "SQL",
             "REST APIs",
-            "SQL",
+            "Databases",
             "Git"
-        ],
-
-        roadmap: [
-            ["Programming", "Python / Java / JavaScript"],
-            ["Backend", "Server development"],
-            ["APIs", "REST API development"],
-            ["Database", "SQL & data"],
-            ["Security", "Authentication"],
-            ["Deploy", "Cloud deployment"]
         ]
 
     },
 
 
-    "ai engineer": {
+    "AI Engineer": {
 
-        title: "AI Engineer",
-
-        match: 94,
+        score: 94,
 
         description:
-            "Build intelligent applications using machine learning, Python and modern AI technologies.",
+            "Build intelligent applications using artificial intelligence, machine learning and generative AI.",
 
         skills: [
             "Python",
             "Machine Learning",
-            "Statistics",
             "Deep Learning",
+            "NLP",
+            "Generative AI",
             "APIs",
-            "AI Tools"
-        ],
-
-        roadmap: [
-            ["Python", "Programming foundations"],
-            ["Math", "Statistics & probability"],
-            ["ML", "Machine learning"],
-            ["Deep Learning", "Neural networks"],
-            ["AI Apps", "Build intelligent systems"],
-            ["Deploy", "Production AI"]
+            "Data"
         ]
 
     },
 
 
-    "data scientist": {
+    "Machine Learning Engineer": {
 
-        title: "Data Scientist",
-
-        match: 92,
+        score: 92,
 
         description:
-            "Turn data into insights and predictive models using statistics, Python and machine learning.",
+            "Design, train and deploy machine learning models for real-world applications.",
 
         skills: [
             "Python",
             "Statistics",
-            "SQL",
-            "Pandas",
             "Machine Learning",
-            "Data Visualization"
-        ],
-
-        roadmap: [
-            ["Python", "Programming"],
-            ["Statistics", "Data fundamentals"],
-            ["SQL", "Data querying"],
-            ["Analysis", "Pandas & visualization"],
-            ["ML", "Predictive models"],
-            ["Projects", "Real datasets"]
+            "Scikit-learn",
+            "Deep Learning",
+            "Model Deployment"
         ]
 
     },
 
 
-    "data analyst": {
+    "Data Scientist": {
 
-        title: "Data Analyst",
-
-        match: 90,
+        score: 94,
 
         description:
-            "Analyze business data and create meaningful insights using SQL, Python and visualization tools.",
+            "Use data, statistics and machine learning to discover insights and build predictive solutions.",
+
+        skills: [
+            "Python",
+            "Statistics",
+            "Pandas",
+            "NumPy",
+            "Machine Learning",
+            "Data Visualization",
+            "SQL"
+        ]
+
+    },
+
+
+    "Data Analyst": {
+
+        score: 90,
+
+        description:
+            "Transform raw data into meaningful insights using analytics, SQL and visualization tools.",
 
         skills: [
             "Excel",
@@ -178,45 +143,26 @@ const careerDatabase = {
             "Power BI",
             "Statistics",
             "Data Visualization"
-        ],
-
-        roadmap: [
-            ["Excel", "Data basics"],
-            ["SQL", "Query databases"],
-            ["Statistics", "Understand data"],
-            ["Python", "Data analysis"],
-            ["Visualization", "Power BI"],
-            ["Portfolio", "Business projects"]
         ]
 
     },
 
 
-    "cybersecurity analyst": {
+    "Cybersecurity Analyst": {
 
-        title: "Cybersecurity Analyst",
-
-        match: 91,
+        score: 89,
 
         description:
-            "Protect systems and networks by learning security fundamentals, monitoring and threat analysis.",
+            "Protect systems, networks and applications by identifying threats and security vulnerabilities.",
 
         skills: [
             "Networking",
             "Linux",
             "Cybersecurity",
-            "Python",
+            "Ethical Hacking",
+            "SOC",
             "SIEM",
-            "Ethical Hacking"
-        ],
-
-        roadmap: [
-            ["Networking", "Network fundamentals"],
-            ["Linux", "Security environment"],
-            ["Security", "Core concepts"],
-            ["Threats", "Threat analysis"],
-            ["Tools", "Security tools"],
-            ["Projects", "Security labs"]
+            "Security Analysis"
         ]
 
     }
@@ -224,13 +170,11 @@ const careerDatabase = {
 };
 
 
-/* =====================================================
+/* =========================================================
    COURSE DATABASE
-===================================================== */
+   ========================================================= */
 
 const courses = [
-
-    /* ---------- GOVERNMENT ---------- */
 
     {
         id: 1,
@@ -238,44 +182,29 @@ const courses = [
         title: "Web Development Fundamentals",
         type: "free",
         category: "government",
+        mode: "online",
+        location: "",
+        duration: "12 Weeks",
+        fee: "Free Learning",
+        certificationFee: "Exam fee applicable",
+        assignment: "Online weekly assignments",
+        examMode: "Offline — Designated Exam Centre",
+        certification: "Certificate available after meeting course requirements and completing the certification examination.",
         level: "Beginner",
-        duration: "8 Weeks",
         skills: ["HTML", "CSS", "JavaScript"],
-        careers: ["full stack developer", "frontend developer"],
-        description:
-            "Learn the fundamentals of building websites and web applications.",
-
+        careers: ["Full Stack Developer", "Frontend Developer"],
+        description: "Learn the fundamentals of modern web development.",
         learn: [
-            "HTML page structure",
-            "CSS styling and layouts",
-            "Responsive web design",
-            "JavaScript fundamentals",
-            "Basic web development concepts"
+            "HTML structure",
+            "CSS styling",
+            "JavaScript basics",
+            "Responsive web design"
         ],
-
         projects: [
-            {
-                title: "Personal Portfolio",
-                description: "Create a responsive personal portfolio website."
-            },
-            {
-                title: "Landing Page",
-                description: "Build a professional responsive landing page."
-            }
+            "Personal Portfolio Website",
+            "Responsive Landing Page"
         ],
-
-        assessments: {
-            online: "6 quizzes + 2 assignments + final test",
-            offline: "Optional proctored certification examination"
-        },
-
-        requirements: [
-            "Complete all modules",
-            "Complete 2 projects",
-            "Complete online assessments",
-            "Pass final assessment"
-        ]
-
+        requirements: "Complete learning activities, assignments and applicable certification requirements."
     },
 
 
@@ -285,95 +214,63 @@ const courses = [
         title: "Programming and Web Development",
         type: "free",
         category: "government",
-        level: "Beginner",
+        mode: "online",
+        location: "",
         duration: "12 Weeks",
-        skills: ["Programming", "Web", "JavaScript"],
-        careers: ["full stack developer", "frontend developer"],
-        description:
-            "University-level learning covering programming and web technologies.",
-
+        fee: "Free Learning",
+        certificationFee: "₹1,000 currently listed exam fee",
+        assignment: "Online weekly assignments",
+        examMode: "Offline — Proctored Exam Centre",
+        certification: "Optional NPTEL certification through the proctored examination.",
+        level: "Beginner",
+        skills: ["Programming", "Web", "JavaScript", "Algorithms"],
+        careers: ["Full Stack Developer", "Frontend Developer", "Backend Developer"],
+        description: "Develop programming foundations and web development knowledge.",
         learn: [
             "Programming fundamentals",
             "Web technologies",
-            "JavaScript concepts",
             "Problem solving",
-            "Software development basics"
+            "Basic algorithms"
         ],
-
         projects: [
-            {
-                title: "Web Application",
-                description: "Build a small web application using learned concepts."
-            },
-            {
-                title: "Programming Project",
-                description: "Solve a real-world programming problem."
-            }
+            "Web Application",
+            "Programming Practice Project"
         ],
-
-        assessments: {
-            online: "Weekly assignments + online quizzes",
-            offline: "Proctored certification examination"
-        },
-
-        requirements: [
-            "Complete weekly assignments",
-            "Complete 2 projects",
-            "Attend assessments",
-            "Complete final examination"
-        ]
-
+        requirements: "Complete weekly assignments and meet the certification examination requirements."
     },
 
 
     {
         id: 3,
-        platform: "SWAYAM Plus",
+        platform: "SWAYAM",
         title: "Industry Ready Web Development",
         type: "free",
         category: "government",
-        level: "Beginner",
-        duration: "10 Weeks",
-        skills: ["HTML", "CSS", "JavaScript", "Git"],
-        careers: ["full stack developer", "frontend developer"],
-        description:
-            "Industry-oriented learning focused on employability and practical skills.",
-
+        mode: "online",
+        location: "",
+        duration: "8 Weeks",
+        fee: "Free Learning",
+        certificationFee: "Exam fee applicable",
+        assignment: "Online assignments",
+        examMode: "Offline — Designated Exam Centre",
+        certification: "Certificate available subject to course and examination requirements.",
+        level: "Intermediate",
+        skills: ["Web Development", "JavaScript", "APIs"],
+        careers: ["Full Stack Developer", "Frontend Developer"],
+        description: "Build industry-oriented web development skills.",
         learn: [
-            "Web development fundamentals",
-            "Frontend development",
-            "Git and version control",
-            "Industry practices",
-            "Project development"
+            "Modern web development",
+            "APIs",
+            "Frontend concepts",
+            "Backend fundamentals"
         ],
-
         projects: [
-            {
-                title: "Business Website",
-                description: "Build a responsive business website."
-            },
-            {
-                title: "Mini Web App",
-                description: "Create an interactive web application."
-            }
+            "Mini Web Application",
+            "API Integration Project"
         ],
-
-        assessments: {
-            online: "Module quizzes + practical assessment",
-            offline: "Assessment mode depends on the course"
-        },
-
-        requirements: [
-            "Complete learning modules",
-            "Complete practical projects",
-            "Pass assessments",
-            "Submit final project"
-        ]
-
+        requirements: "Complete course activities and applicable certification requirements."
     },
 
-
-    /* ---------- INDUSTRY ---------- */
 
     {
         id: 4,
@@ -381,39 +278,28 @@ const courses = [
         title: "Web Development Learning Path",
         type: "free",
         category: "industry",
-        level: "Beginner",
+        mode: "online",
+        location: "",
         duration: "Self-paced",
+        fee: "Free",
+        certificationFee: "No separate course certification fee",
+        assignment: "Interactive exercises",
+        examMode: "Provider-specific",
+        certification: "Learning path completion badges may be available.",
+        level: "Beginner",
         skills: ["HTML", "CSS", "JavaScript"],
-        careers: ["full stack developer", "frontend developer"],
-        description:
-            "Free industry learning resources for modern web development.",
-
+        careers: ["Frontend Developer", "Full Stack Developer"],
+        description: "Learn web development through Microsoft's interactive learning platform.",
         learn: [
             "HTML",
             "CSS",
             "JavaScript",
-            "Web accessibility",
-            "Developer tools"
+            "Web accessibility"
         ],
-
         projects: [
-            {
-                title: "Interactive Website",
-                description: "Create an interactive website using web technologies."
-            }
+            "Interactive Web Page"
         ],
-
-        assessments: {
-            online: "Module knowledge checks",
-            offline: "Not applicable for learning modules"
-        },
-
-        requirements: [
-            "Complete learning modules",
-            "Complete knowledge checks",
-            "Build the recommended project"
-        ]
-
+        requirements: "Complete the modules and practical exercises."
     },
 
 
@@ -423,778 +309,826 @@ const courses = [
         title: "AI and Web Development Foundations",
         type: "free",
         category: "industry",
-        level: "Beginner",
+        mode: "online",
+        location: "",
         duration: "Self-paced",
-        skills: ["AI", "Programming", "Web"],
-        careers: ["full stack developer", "ai engineer"],
-        description:
-            "Industry-focused learning with practical digital skills.",
-
+        fee: "Free",
+        certificationFee: "Free digital credentials where applicable",
+        assignment: "Online learning activities",
+        examMode: "Provider-specific",
+        certification: "Digital credentials may be available for eligible learning activities.",
+        level: "Beginner",
+        skills: ["AI", "Web", "Programming"],
+        careers: ["AI Engineer", "Full Stack Developer"],
+        description: "Build foundational knowledge across AI and technology.",
         learn: [
-            "Digital technology fundamentals",
-            "Programming concepts",
             "AI fundamentals",
-            "Web concepts",
-            "Professional skills"
+            "Technology concepts",
+            "Programming basics"
         ],
-
         projects: [
-            {
-                title: "Digital Solution",
-                description: "Create a small technology solution."
-            }
+            "AI/Web Mini Project"
         ],
-
-        assessments: {
-            online: "Knowledge checks and learning activities",
-            offline: "Not applicable"
-        },
-
-        requirements: [
-            "Complete modules",
-            "Pass knowledge checks",
-            "Complete practical activity"
-        ]
-
+        requirements: "Complete required learning activities."
     },
 
 
-    /* ---------- UNIVERSITY ---------- */
-
     {
         id: 6,
-        platform: "edX",
-        title: "CS50's Web Programming",
-        type: "paid",
-        category: "university",
-        level: "Intermediate",
-        duration: "12 Weeks",
-        skills: ["Python", "JavaScript", "SQL", "Web"],
-        careers: ["full stack developer", "backend developer"],
-        description:
-            "University-level web programming covering frontend and backend concepts.",
-
+        platform: "freeCodeCamp",
+        title: "Responsive Web Design",
+        type: "free",
+        category: "industry",
+        mode: "online",
+        location: "",
+        duration: "Self-paced",
+        fee: "Free",
+        certificationFee: "Free",
+        assignment: "Hands-on coding exercises",
+        examMode: "Project-based",
+        certification: "Certification based on completion of required projects.",
+        level: "Beginner",
+        skills: ["HTML", "CSS", "Responsive Design"],
+        careers: ["Frontend Developer", "Full Stack Developer"],
+        description: "Learn responsive web design through practical coding projects.",
         learn: [
-            "HTML and CSS",
-            "JavaScript",
-            "Python",
-            "Databases",
-            "APIs",
-            "Web application architecture"
+            "HTML",
+            "CSS",
+            "Flexbox",
+            "Grid",
+            "Responsive layouts"
         ],
-
         projects: [
-            {
-                title: "Search Application",
-                description: "Build a functional search-based web application."
-            },
-            {
-                title: "E-commerce Application",
-                description: "Create a web application with user functionality."
-            },
-            {
-                title: "Final Web Project",
-                description: "Build an original web application."
-            }
+            "Tribute Page",
+            "Product Landing Page",
+            "Portfolio Website"
         ],
-
-        assessments: {
-            online: "Programming assignments + project evaluation",
-            offline: "Course assessment requirements depend on the program"
-        },
-
-        requirements: [
-            "Complete programming assignments",
-            "Complete 3 projects",
-            "Pass course assessments",
-            "Submit final project"
-        ]
-
+        requirements: "Complete required projects and certification tasks."
     },
 
 
     {
         id: 7,
-        platform: "Coursera",
-        title: "Full Stack Web Development",
-        type: "paid",
-        category: "university",
-        level: "Beginner",
-        duration: "4-6 Months",
-        skills: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
-        careers: ["full stack developer", "frontend developer"],
-        description:
-            "Structured learning covering frontend and backend web development.",
-
+        platform: "The Odin Project",
+        title: "Full Stack JavaScript Path",
+        type: "free",
+        category: "industry",
+        mode: "online",
+        location: "",
+        duration: "Self-paced",
+        fee: "Free",
+        certificationFee: "No paid certification required",
+        assignment: "Coding assignments",
+        examMode: "Project-based",
+        certification: "Project portfolio focused learning.",
+        level: "Intermediate",
+        skills: ["JavaScript", "React", "Node.js", "Git"],
+        careers: ["Full Stack Developer", "Backend Developer"],
+        description: "A project-based path for learning full stack JavaScript.",
         learn: [
-            "HTML and CSS",
             "JavaScript",
             "React",
-            "Backend development",
-            "APIs",
+            "Node.js",
+            "Git",
             "Databases"
         ],
-
         projects: [
-            {
-                title: "Responsive Website",
-                description: "Build a modern responsive website."
-            },
-            {
-                title: "React Application",
-                description: "Create an interactive React application."
-            },
-            {
-                title: "Full Stack Application",
-                description: "Build a complete frontend and backend application."
-            }
+            "Full Stack Web App",
+            "JavaScript Application",
+            "React Project"
         ],
-
-        assessments: {
-            online: "Quizzes + coding assignments + project reviews",
-            offline: "Usually online; provider-specific certification requirements may apply"
-        },
-
-        requirements: [
-            "Complete course modules",
-            "Complete 3 projects",
-            "Pass required quizzes",
-            "Submit final project"
-        ]
-
+        requirements: "Complete lessons, exercises and projects."
     },
 
 
-    /* ---------- FREE COMMUNITY ---------- */
-
     {
         id: 8,
-        platform: "freeCodeCamp",
-        title: "Responsive Web Design",
-        type: "free",
-        category: "industry",
-        level: "Beginner",
-        duration: "Self-paced",
-        skills: ["HTML", "CSS", "Responsive Design"],
-        careers: ["frontend developer", "full stack developer", "web designer"],
-        description:
-            "Hands-on free learning through coding challenges and projects.",
-
+        platform: "Coursera",
+        title: "Machine Learning",
+        type: "paid",
+        category: "university",
+        mode: "online",
+        location: "",
+        duration: "Approx. 3 Months",
+        fee: "Paid / Subscription",
+        certificationFee: "Included according to enrollment plan",
+        assignment: "Online quizzes and programming assignments",
+        examMode: "Online / Provider-specific",
+        certification: "Course certificate according to the selected enrollment.",
+        level: "Intermediate",
+        skills: ["Python", "Machine Learning", "Statistics"],
+        careers: ["AI Engineer", "Machine Learning Engineer", "Data Scientist"],
+        description: "Learn core machine learning concepts and practical model building.",
         learn: [
-            "HTML",
-            "CSS",
-            "Responsive design",
-            "Accessibility",
-            "Modern web layouts"
+            "Supervised learning",
+            "Unsupervised learning",
+            "Model evaluation",
+            "Machine learning algorithms"
         ],
-
         projects: [
-            {
-                title: "Tribute Page",
-                description: "Create a responsive tribute page."
-            },
-            {
-                title: "Survey Form",
-                description: "Build a functional survey form."
-            },
-            {
-                title: "Product Landing Page",
-                description: "Create a responsive product page."
-            },
-            {
-                title: "Technical Documentation",
-                description: "Build a technical documentation website."
-            },
-            {
-                title: "Personal Portfolio",
-                description: "Create a responsive portfolio website."
-            }
+            "Prediction Model",
+            "Machine Learning Application"
         ],
-
-        assessments: {
-            online: "Coding challenges + project tests",
-            offline: "Not applicable"
-        },
-
-        requirements: [
-            "Complete coding challenges",
-            "Complete 5 projects",
-            "Pass project tests"
-        ]
-
+        requirements: "Complete assignments and required course activities."
     },
 
 
     {
         id: 9,
-        platform: "The Odin Project",
-        title: "Full Stack JavaScript Path",
+        platform: "NPTEL",
+        title: "Introduction to Machine Learning",
         type: "free",
-        category: "industry",
-        level: "Beginner",
-        duration: "Self-paced",
-        skills: ["JavaScript", "React", "Node.js", "Git"],
-        careers: ["full stack developer", "frontend developer", "backend developer"],
-        description:
-            "Project-based full-stack learning with a strong JavaScript focus.",
-
+        category: "government",
+        mode: "online",
+        location: "",
+        duration: "12 Weeks",
+        fee: "Free Learning",
+        certificationFee: "₹1,000 currently listed exam fee",
+        assignment: "Online weekly assignments",
+        examMode: "Offline — Proctored Exam Centre",
+        certification: "Optional NPTEL certification through the proctored examination.",
+        level: "Intermediate",
+        skills: ["Python", "Machine Learning", "Statistics"],
+        careers: ["AI Engineer", "Machine Learning Engineer", "Data Scientist"],
+        description: "Learn machine learning fundamentals and algorithms.",
         learn: [
-            "HTML and CSS",
-            "JavaScript",
-            "Git",
-            "React",
-            "Node.js",
-            "Databases"
+            "Machine learning concepts",
+            "Regression",
+            "Classification",
+            "Model evaluation"
         ],
-
         projects: [
-            {
-                title: "Landing Page",
-                description: "Build a responsive landing page."
-            },
-            {
-                title: "JavaScript Application",
-                description: "Create an interactive JavaScript application."
-            },
-            {
-                title: "Full Stack Project",
-                description: "Build a complete full-stack application."
-            }
+            "ML Prediction Project"
         ],
-
-        assessments: {
-            online: "Coding exercises + project reviews",
-            offline: "Not applicable"
-        },
-
-        requirements: [
-            "Complete lessons",
-            "Complete coding exercises",
-            "Build 3+ portfolio projects",
-            "Complete the selected path"
-        ]
-
+        requirements: "Complete weekly assignments and certification requirements if selected."
     },
 
 
-    /* ---------- PAID ---------- */
-
     {
         id: 10,
-        platform: "Udemy",
-        title: "Complete Full Stack Developer Bootcamp",
-        type: "paid",
+        platform: "IBM SkillsBuild",
+        title: "AI and Machine Learning Foundations",
+        type: "free",
         category: "industry",
+        mode: "online",
+        location: "",
+        duration: "Self-paced",
+        fee: "Free",
+        certificationFee: "Free digital credentials where applicable",
+        assignment: "Online activities",
+        examMode: "Provider-specific",
+        certification: "Digital credential may be available.",
         level: "Beginner",
-        duration: "40+ Hours",
-        skills: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
-        careers: ["full stack developer"],
-        description:
-            "Practical bootcamp-style learning with multiple development projects.",
-
+        skills: ["AI", "Machine Learning", "Python"],
+        careers: ["AI Engineer", "Machine Learning Engineer"],
+        description: "Understand the foundations of AI and machine learning.",
         learn: [
-            "Frontend development",
-            "JavaScript",
-            "React",
-            "Node.js",
-            "Express",
-            "MongoDB",
-            "Deployment"
+            "AI concepts",
+            "Machine learning basics",
+            "Data concepts"
         ],
-
         projects: [
-            {
-                title: "Portfolio Website",
-                description: "Build your professional developer portfolio."
-            },
-            {
-                title: "Task Manager",
-                description: "Build a full-stack task management application."
-            },
-            {
-                title: "E-commerce Website",
-                description: "Create a complete e-commerce application."
-            },
-            {
-                title: "Final Full Stack Project",
-                description: "Build an original production-style project."
-            }
+            "AI Mini Project"
         ],
-
-        assessments: {
-            online: "Quizzes + coding exercises + projects",
-            offline: "Not normally provided"
-        },
-
-        requirements: [
-            "Complete lectures",
-            "Complete coding exercises",
-            "Build 4 projects",
-            "Complete final project"
-        ]
-
+        requirements: "Complete required learning activities."
     },
 
 
     {
         id: 11,
-        platform: "Great Learning",
-        title: "Full Stack Development Program",
-        type: "paid",
+        platform: "Microsoft Learn",
+        title: "Data Analytics Learning Path",
+        type: "free",
         category: "industry",
+        mode: "online",
+        location: "",
+        duration: "Self-paced",
+        fee: "Free",
+        certificationFee: "No separate course fee",
+        assignment: "Interactive exercises",
+        examMode: "Provider-specific",
+        certification: "Learning achievements and badges may be available.",
         level: "Beginner",
-        duration: "6 Months",
-        skills: ["HTML", "CSS", "JavaScript", "React", "Backend"],
-        careers: ["full stack developer"],
-        description:
-            "Structured full-stack development learning with practical projects.",
-
+        skills: ["Data Analytics", "SQL", "Power BI"],
+        careers: ["Data Analyst", "Data Scientist"],
+        description: "Develop data analytics skills using modern tools.",
         learn: [
-            "Frontend technologies",
-            "Backend development",
-            "Databases",
-            "API development",
-            "Software development practices"
+            "Data analysis",
+            "Data visualization",
+            "Power BI",
+            "Data modeling"
         ],
-
         projects: [
-            {
-                title: "Frontend Project",
-                description: "Build a responsive frontend application."
-            },
-            {
-                title: "Backend API",
-                description: "Create a backend REST API."
-            },
-            {
-                title: "Full Stack Application",
-                description: "Connect frontend, backend and database."
-            }
+            "Business Dashboard"
         ],
-
-        assessments: {
-            online: "Quizzes + assignments + project evaluation",
-            offline: "Depends on program format"
-        },
-
-        requirements: [
-            "Complete modules",
-            "Complete 3 projects",
-            "Pass assessments",
-            "Submit final project"
-        ]
-
+        requirements: "Complete modules and exercises."
     },
 
 
     {
         id: 12,
-        platform: "Simplilearn",
-        title: "Full Stack Developer Program",
+        platform: "Google",
+        title: "Google Data Analytics Certificate",
         type: "paid",
         category: "industry",
-        level: "Intermediate",
-        duration: "6 Months",
-        skills: ["JavaScript", "React", "Node.js", "SQL", "Cloud"],
-        careers: ["full stack developer", "software developer"],
-        description:
-            "Career-focused learning covering full-stack technologies and projects.",
+        mode: "online",
+        location: "",
+        duration: "Approx. 6 Months",
+        fee: "Paid / Subscription",
+        certificationFee: "Included according to enrollment",
+        assignment: "Online quizzes and practical activities",
+        examMode: "Online / Provider-specific",
+        certification: "Professional certificate after completing the program.",
+        level: "Beginner",
+        skills: ["SQL", "Excel", "Data Analysis", "Visualization"],
+        careers: ["Data Analyst"],
+        description: "Build job-ready data analytics skills.",
+        learn: [
+            "Data cleaning",
+            "SQL",
+            "Spreadsheets",
+            "Data visualization"
+        ],
+        projects: [
+            "Data Analysis Case Study",
+            "Portfolio Project"
+        ],
+        requirements: "Complete all required modules and practical activities."
+    },
 
+
+    {
+        id: 13,
+        platform: "IBM SkillsBuild",
+        title: "Data Analytics Foundations",
+        type: "free",
+        category: "industry",
+        mode: "online",
+        location: "",
+        duration: "Self-paced",
+        fee: "Free",
+        certificationFee: "Free digital credentials where applicable",
+        assignment: "Interactive learning activities",
+        examMode: "Provider-specific",
+        certification: "Digital credentials may be available.",
+        level: "Beginner",
+        skills: ["Data", "Analytics", "Visualization"],
+        careers: ["Data Analyst", "Data Scientist"],
+        description: "Learn the fundamentals of data analytics.",
+        learn: [
+            "Data concepts",
+            "Analytics",
+            "Visualization",
+            "Data-driven decisions"
+        ],
+        projects: [
+            "Data Visualization Project"
+        ],
+        requirements: "Complete the learning activities."
+    },
+
+
+    {
+        id: 14,
+        platform: "NPTEL",
+        title: "Data Science and Analytics",
+        type: "free",
+        category: "government",
+        mode: "online",
+        location: "",
+        duration: "12 Weeks",
+        fee: "Free Learning",
+        certificationFee: "₹1,000 currently listed exam fee",
+        assignment: "Online weekly assignments",
+        examMode: "Offline — Proctored Exam Centre",
+        certification: "Optional certification through the proctored examination.",
+        level: "Intermediate",
+        skills: ["Python", "Data Science", "Statistics", "SQL"],
+        careers: ["Data Scientist", "Data Analyst"],
+        description: "Explore data science concepts, statistics and analytics.",
+        learn: [
+            "Statistics",
+            "Python",
+            "Data analysis",
+            "Data science fundamentals"
+        ],
+        projects: [
+            "Data Analysis Project",
+            "Predictive Analytics Project"
+        ],
+        requirements: "Complete weekly assignments and examination requirements."
+    },
+
+
+    {
+        id: 15,
+        platform: "NIELIT",
+        title: "Artificial Intelligence and Machine Learning",
+        type: "paid",
+        category: "government",
+        mode: "online",
+        location: "",
+        duration: "Varies by program",
+        fee: "Fee varies by program",
+        certificationFee: "As applicable",
+        assignment: "Online practical assignments",
+        examMode: "Provider-specific",
+        certification: "Certification according to the selected NIELIT program.",
+        level: "Intermediate",
+        skills: ["AI", "ML", "Python"],
+        careers: ["AI Engineer", "Machine Learning Engineer"],
+        description: "Develop practical foundations in AI and machine learning.",
+        learn: [
+            "AI concepts",
+            "Machine learning",
+            "Python",
+            "Model development"
+        ],
+        projects: [
+            "Machine Learning Project"
+        ],
+        requirements: "Complete program requirements."
+    },
+
+
+    {
+        id: 16,
+        platform: "IBM SkillsBuild",
+        title: "Cybersecurity Fundamentals",
+        type: "free",
+        category: "industry",
+        mode: "online",
+        location: "",
+        duration: "Self-paced",
+        fee: "Free",
+        certificationFee: "Free digital credentials where applicable",
+        assignment: "Interactive cybersecurity activities",
+        examMode: "Provider-specific",
+        certification: "Digital credentials may be available.",
+        level: "Beginner",
+        skills: ["Cybersecurity", "Networking", "Security"],
+        careers: ["Cybersecurity Analyst"],
+        description: "Build foundational knowledge in cybersecurity.",
+        learn: [
+            "Cyber threats",
+            "Security concepts",
+            "Network security",
+            "Risk awareness"
+        ],
+        projects: [
+            "Cybersecurity Awareness Project"
+        ],
+        requirements: "Complete required learning activities."
+    },
+
+
+    {
+        id: 17,
+        platform: "NIELIT",
+        title: "Cyber Security Assistant",
+        type: "paid",
+        category: "government",
+        mode: "online",
+        location: "",
+        duration: "Varies",
+        fee: "Fee varies",
+        certificationFee: "As applicable",
+        assignment: "Practical assignments",
+        examMode: "Provider-specific",
+        certification: "Program-specific certification.",
+        level: "Intermediate",
+        skills: ["Cybersecurity", "Networking", "Linux"],
+        careers: ["Cybersecurity Analyst"],
+        description: "Develop practical cybersecurity and security operations skills.",
+        learn: [
+            "Network security",
+            "Linux basics",
+            "Security concepts",
+            "Cyber threats"
+        ],
+        projects: [
+            "Security Analysis Project"
+        ],
+        requirements: "Complete program requirements."
+    },
+
+
+    {
+        id: 18,
+        platform: "Coursera",
+        title: "Cybersecurity Foundations",
+        type: "paid",
+        category: "university",
+        mode: "online",
+        location: "",
+        duration: "Self-paced",
+        fee: "Paid / Subscription",
+        certificationFee: "According to enrollment plan",
+        assignment: "Online quizzes and practical assignments",
+        examMode: "Online / Provider-specific",
+        certification: "Course certificate according to enrollment.",
+        level: "Beginner",
+        skills: ["Cybersecurity", "Networking", "Security"],
+        careers: ["Cybersecurity Analyst"],
+        description: "Learn fundamental cybersecurity concepts.",
+        learn: [
+            "Security fundamentals",
+            "Threats",
+            "Network security",
+            "Risk management"
+        ],
+        projects: [
+            "Cybersecurity Case Study"
+        ],
+        requirements: "Complete required course activities."
+    },
+
+
+    {
+        id: 19,
+        platform: "Udemy",
+        title: "Complete Full Stack Developer Bootcamp",
+        type: "paid",
+        category: "industry",
+        mode: "online",
+        location: "",
+        duration: "Self-paced",
+        fee: "Paid",
+        certificationFee: "Included according to course",
+        assignment: "Coding assignments",
+        examMode: "Project-based",
+        certification: "Course completion certificate.",
+        level: "Beginner",
+        skills: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
+        careers: ["Full Stack Developer"],
+        description: "Learn full stack development through structured lessons and projects.",
         learn: [
             "Frontend development",
             "Backend development",
             "Databases",
-            "Cloud concepts",
-            "Software development"
+            "APIs"
         ],
-
         projects: [
-            {
-                title: "Web Application",
-                description: "Build a complete web application."
-            },
-            {
-                title: "API Project",
-                description: "Develop a REST API."
-            },
-            {
-                title: "Capstone Project",
-                description: "Build a portfolio-ready final project."
-            }
+            "Full Stack Web Application",
+            "REST API Project"
         ],
+        requirements: "Complete course lessons and projects."
+    },
 
-        assessments: {
-            online: "Module tests + coding assignments",
-            offline: "Program-specific assessment"
-        },
 
-        requirements: [
-            "Complete modules",
-            "Complete assignments",
-            "Build 3 projects",
-            "Complete capstone project"
-        ]
+    {
+        id: 20,
+        platform: "Great Learning",
+        title: "Full Stack Development Program",
+        type: "paid",
+        category: "industry",
+        mode: "online",
+        location: "",
+        duration: "Varies",
+        fee: "Paid",
+        certificationFee: "According to program",
+        assignment: "Online assignments",
+        examMode: "Provider-specific",
+        certification: "Program certificate according to course terms.",
+        level: "Beginner",
+        skills: ["HTML", "CSS", "JavaScript", "React"],
+        careers: ["Full Stack Developer", "Frontend Developer"],
+        description: "Learn full stack development through guided learning.",
+        learn: [
+            "Frontend",
+            "Backend",
+            "Databases",
+            "Web applications"
+        ],
+        projects: [
+            "Full Stack Project"
+        ],
+        requirements: "Complete the program requirements."
+    },
 
+
+    {
+        id: 21,
+        platform: "360DigiTMG",
+        title: "Data Analytics Classroom Training",
+        type: "paid",
+        category: "industry",
+        mode: "offline",
+        location: "Anantapur",
+        duration: "Approx. 4 Months",
+        fee: "Contact provider",
+        certificationFee: "According to institute",
+        assignment: "Classroom assignments and practical work",
+        examMode: "Offline — Training Centre",
+        certification: "Institute certification according to program terms.",
+        level: "Beginner",
+        skills: ["Excel", "SQL", "Power BI", "Data Analytics"],
+        careers: ["Data Analyst"],
+        description: "Classroom-oriented data analytics training.",
+        learn: [
+            "Excel",
+            "SQL",
+            "Power BI",
+            "Data analytics"
+        ],
+        projects: [
+            "Business Dashboard",
+            "Data Analytics Capstone"
+        ],
+        requirements: "Attend training sessions and complete practical assignments."
+    },
+
+
+    {
+        id: 22,
+        platform: "360DigiTMG",
+        title: "Cyber Security Classroom Training",
+        type: "paid",
+        category: "industry",
+        mode: "offline",
+        location: "Anantapur",
+        duration: "Approx. 1 Month",
+        fee: "Contact provider",
+        certificationFee: "According to institute",
+        assignment: "Classroom practical assignments",
+        examMode: "Offline — Training Centre",
+        certification: "Institute certification according to program terms.",
+        level: "Beginner",
+        skills: ["Cybersecurity", "Networking", "Linux"],
+        careers: ["Cybersecurity Analyst"],
+        description: "Practical cybersecurity training in classroom mode.",
+        learn: [
+            "Cybersecurity fundamentals",
+            "Networking",
+            "Security tools"
+        ],
+        projects: [
+            "Security Lab Project"
+        ],
+        requirements: "Attend classes and complete practical work."
+    },
+
+
+    {
+        id: 23,
+        platform: "Quality Thought",
+        title: "Cyber Security with AI",
+        type: "paid",
+        category: "industry",
+        mode: "offline",
+        location: "Hyderabad",
+        duration: "3–6 Months",
+        fee: "₹40,000 listed",
+        certificationFee: "According to program",
+        assignment: "Classroom practical assignments",
+        examMode: "Offline — Training Centre",
+        certification: "Institute certification according to program terms.",
+        level: "Intermediate",
+        skills: ["Cybersecurity", "AI", "Ethical Hacking"],
+        careers: ["Cybersecurity Analyst", "AI Engineer"],
+        description: "Cybersecurity training combining security and AI concepts.",
+        learn: [
+            "Cybersecurity",
+            "Ethical hacking",
+            "AI for security"
+        ],
+        projects: [
+            "Security Monitoring Project"
+        ],
+        requirements: "Attend training and complete practical assignments."
+    },
+
+
+    {
+        id: 24,
+        platform: "QEdge",
+        title: "Data Analytics with AI",
+        type: "paid",
+        category: "industry",
+        mode: "offline",
+        location: "Hyderabad",
+        duration: "Approx. 4 Months",
+        fee: "Contact provider",
+        certificationFee: "According to program",
+        assignment: "Classroom assignments",
+        examMode: "Offline — Training Centre",
+        certification: "Institute certification according to program terms.",
+        level: "Beginner",
+        skills: ["Data Analytics", "AI", "SQL", "Power BI"],
+        careers: ["Data Analyst", "Data Scientist"],
+        description: "Classroom data analytics training with AI concepts.",
+        learn: [
+            "Data analysis",
+            "SQL",
+            "Power BI",
+            "AI fundamentals"
+        ],
+        projects: [
+            "Analytics Dashboard",
+            "AI Analytics Project"
+        ],
+        requirements: "Complete classroom sessions and assignments."
+    },
+
+
+    {
+        id: 25,
+        platform: "CodeEasy Innovation Labs",
+        title: "AI Engineer Program",
+        type: "paid",
+        category: "industry",
+        mode: "offline",
+        location: "Bengaluru",
+        duration: "12 Weeks",
+        fee: "Contact provider",
+        certificationFee: "According to program",
+        assignment: "In-person practical assignments",
+        examMode: "Offline — Training Centre",
+        certification: "Institute program completion certification.",
+        level: "Intermediate",
+        skills: ["Python", "AI", "Machine Learning", "Generative AI"],
+        careers: ["AI Engineer", "Machine Learning Engineer"],
+        description: "In-person AI engineering program with practical projects.",
+        learn: [
+            "Python",
+            "AI engineering",
+            "Machine learning",
+            "Generative AI"
+        ],
+        projects: [
+            "AI Application",
+            "Capstone Project"
+        ],
+        requirements: "Attend sessions and complete required projects."
+    },
+
+
+    {
+        id: 26,
+        platform: "Cambridge Infotech",
+        title: "Full Stack Development Training",
+        type: "paid",
+        category: "industry",
+        mode: "offline",
+        location: "Bengaluru",
+        duration: "Approx. 120 Hours",
+        fee: "Contact provider",
+        certificationFee: "According to program",
+        assignment: "Classroom practical assignments",
+        examMode: "Offline — Training Centre",
+        certification: "Training completion certificate according to provider.",
+        level: "Beginner",
+        skills: ["HTML", "CSS", "JavaScript", "Backend"],
+        careers: ["Full Stack Developer", "Frontend Developer"],
+        description: "Classroom-oriented full stack development training.",
+        learn: [
+            "Frontend development",
+            "Backend development",
+            "Databases",
+            "Deployment"
+        ],
+        projects: [
+            "Full Stack Application",
+            "Portfolio Website"
+        ],
+        requirements: "Attend classes and complete practical projects."
+    },
+
+
+    {
+        id: 27,
+        platform: "Vizonis Academy",
+        title: "Data Analytics Classroom Program",
+        type: "paid",
+        category: "industry",
+        mode: "offline",
+        location: "Bengaluru",
+        duration: "Weekend Program",
+        fee: "Contact provider",
+        certificationFee: "According to program",
+        assignment: "In-person practical assignments",
+        examMode: "Offline — Training Centre",
+        certification: "Provider certification according to course terms.",
+        level: "Beginner",
+        skills: ["Excel", "SQL", "Power BI"],
+        careers: ["Data Analyst"],
+        description: "In-person data analytics training.",
+        learn: [
+            "Excel",
+            "SQL",
+            "Power BI",
+            "Data visualization"
+        ],
+        projects: [
+            "Analytics Dashboard"
+        ],
+        requirements: "Attend sessions and complete practical activities."
+    },
+
+
+    {
+        id: 28,
+        platform: "Intellipaat",
+        title: "Data Science and AI Program",
+        type: "paid",
+        category: "industry",
+        mode: "offline",
+        location: "Bengaluru",
+        duration: "4–6 Months",
+        fee: "Contact provider",
+        certificationFee: "According to program",
+        assignment: "Classroom assignments and projects",
+        examMode: "Offline — Training Centre",
+        certification: "Program certification according to enrollment.",
+        level: "Intermediate",
+        skills: ["Python", "Data Science", "AI", "ML"],
+        careers: ["Data Scientist", "AI Engineer", "Machine Learning Engineer"],
+        description: "Classroom-based data science and AI training.",
+        learn: [
+            "Python",
+            "Statistics",
+            "Machine learning",
+            "AI"
+        ],
+        projects: [
+            "Machine Learning Project",
+            "Data Science Capstone"
+        ],
+        requirements: "Complete classroom training and projects."
     }
 
 ];
 
 
-/* =====================================================
-   VARIABLES
-===================================================== */
+/* =========================================================
+   CAREER SELECTION
+   ========================================================= */
 
-let selectedCareer = "full stack developer";
-
-let activeFilter = "all";
+let selectedCareers = [];
 
 
-/* =====================================================
-   INITIALIZATION
-===================================================== */
+const careerChips =
+    document.querySelectorAll(".career-chip");
 
-document.addEventListener("DOMContentLoaded", () => {
-
-    setupCareerSearch();
-
-    setupFilters();
-
-    setupCourseSearch();
-
-    setupSuggestions();
-
-    renderCareer(selectedCareer);
-
-    renderCourses();
-
-    setupKeyboard();
-
-});
+const selectedCareersBox =
+    document.getElementById("selectedCareers");
 
 
-/* =====================================================
-   CAREER SEARCH
-===================================================== */
+function updateSelectedCareers() {
 
-function setupCareerSearch() {
-
-    const button = document.getElementById("generateBtn");
-
-    button.addEventListener("click", generatePath);
-
-}
+    selectedCareersBox.innerHTML = "";
 
 
-function generatePath() {
+    if (selectedCareers.length === 0) {
 
-    const input =
-        document.getElementById("careerInput").value.trim();
-
-    if (!input) {
-
-        showToast("Please enter a career goal.");
+        selectedCareersBox.innerHTML =
+            `<span class="placeholder">
+                Select up to 3 career goals
+             </span>`;
 
         return;
-
-    }
-
-    const career = findCareer(input);
-
-    selectedCareer = career.key;
-
-    renderCareer(selectedCareer);
-
-    renderCourses();
-
-    document
-        .querySelector(".ai-match-section")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
-
-    showToast(
-        `AI learning path generated for ${career.title}`
-    );
-
-}
-
-
-/* =====================================================
-   FIND CAREER
-===================================================== */
-
-function findCareer(input) {
-
-    const normalized =
-        input.toLowerCase().trim();
-
-    /* Exact match */
-
-    if (careerDatabase[normalized]) {
-
-        return {
-            key: normalized,
-            ...careerDatabase[normalized]
-        };
-
     }
 
 
-    /* Partial match */
+    selectedCareers.forEach(career => {
 
-    const foundKey =
-        Object.keys(careerDatabase).find(key =>
-            key.includes(normalized) ||
-            normalized.includes(key)
-        );
-
-
-    if (foundKey) {
-
-        return {
-            key: foundKey,
-            ...careerDatabase[foundKey]
-        };
-
-    }
-
-
-    /* Keyword matching */
-
-    if (
-        normalized.includes("ai") ||
-        normalized.includes("artificial intelligence")
-    ) {
-
-        return {
-            key: "ai engineer",
-            ...careerDatabase["ai engineer"]
-        };
-
-    }
-
-
-    if (
-        normalized.includes("data scientist") ||
-        normalized.includes("data science")
-    ) {
-
-        return {
-            key: "data scientist",
-            ...careerDatabase["data scientist"]
-        };
-
-    }
-
-
-    if (
-        normalized.includes("data analyst") ||
-        normalized.includes("analytics")
-    ) {
-
-        return {
-            key: "data analyst",
-            ...careerDatabase["data analyst"]
-        };
-
-    }
-
-
-    if (
-        normalized.includes("cyber") ||
-        normalized.includes("security")
-    ) {
-
-        return {
-            key: "cybersecurity analyst",
-            ...careerDatabase["cybersecurity analyst"]
-        };
-
-    }
-
-
-    if (
-        normalized.includes("frontend") ||
-        normalized.includes("front end")
-    ) {
-
-        return {
-            key: "frontend developer",
-            ...careerDatabase["frontend developer"]
-        };
-
-    }
-
-
-    if (
-        normalized.includes("backend") ||
-        normalized.includes("back end")
-    ) {
-
-        return {
-            key: "backend developer",
-            ...careerDatabase["backend developer"]
-        };
-
-    }
-
-
-    /* Default */
-
-    return {
-        key: "full stack developer",
-        ...careerDatabase["full stack developer"]
-    };
-
-}
-
-
-/* =====================================================
-   RENDER CAREER
-===================================================== */
-
-function renderCareer(key) {
-
-    const career =
-        careerDatabase[key];
-
-    document.getElementById("careerTitle").textContent =
-        career.title;
-
-    document.getElementById("careerDescription").textContent =
-        career.description;
-
-    document.getElementById("recommendedCareer").textContent =
-        career.title;
-
-
-    /* Skills */
-
-    const skillList =
-        document.getElementById("skillList");
-
-    skillList.innerHTML = "";
-
-    career.skills.forEach(skill => {
-
-        const chip =
-            document.createElement("span");
-
-        chip.className = "skill-chip";
-
-        chip.textContent = skill;
-
-        skillList.appendChild(chip);
-
-    });
-
-
-    /* Score */
-
-    document.getElementById("matchScore").textContent =
-        career.match;
-
-    const progress =
-        document.getElementById("scoreProgress");
-
-    const circumference = 326.7;
-
-    progress.style.strokeDashoffset =
-        circumference -
-        (career.match / 100) * circumference;
-
-
-    /* Roadmap */
-
-    renderRoadmap(career.roadmap);
-
-}
-
-
-/* =====================================================
-   ROADMAP
-===================================================== */
-
-function renderRoadmap(roadmap) {
-
-    const container =
-        document.getElementById("roadmapContainer");
-
-    container.innerHTML = "";
-
-    roadmap.forEach((step, index) => {
-
-        const item =
+        const tag =
             document.createElement("div");
 
-        item.className = "roadmap-step";
+        tag.className = "selected-career";
 
-        item.innerHTML = `
+        tag.innerHTML = `
+            ${career}
 
-            <div class="roadmap-node">
-                ${getRoadmapIcon(index)}
-            </div>
-
-            <h4>${step[0]}</h4>
-
-            <p>${step[1]}</p>
-
+            <button
+                type="button"
+                data-remove="${career}">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
         `;
 
-        container.appendChild(item);
+        selectedCareersBox.appendChild(tag);
 
     });
 
-}
-
-
-function getRoadmapIcon(index) {
-
-    const icons = [
-
-        "fa-book-open",
-
-        "fa-code",
-
-        "fa-laptop-code",
-
-        "fa-server",
-
-        "fa-database",
-
-        "fa-cloud-arrow-up"
-
-    ];
-
-    return `<i class="fa-solid ${icons[index] || "fa-star"}"></i>`;
-
-}
-
-
-/* =====================================================
-   COURSE FILTERS
-===================================================== */
-
-function setupFilters() {
 
     document
-        .querySelectorAll(".filter-btn")
+        .querySelectorAll("[data-remove]")
         .forEach(button => {
 
             button.addEventListener("click", () => {
 
-                document
-                    .querySelectorAll(".filter-btn")
-                    .forEach(btn =>
-                        btn.classList.remove("active")
+                const career =
+                    button.dataset.remove;
+
+                selectedCareers =
+                    selectedCareers.filter(
+                        item => item !== career
                     );
 
-                button.classList.add("active");
+                updateCareerChipState();
 
-                activeFilter =
-                    button.dataset.filter;
-
-                renderCourses();
+                updateSelectedCareers();
 
             });
 
@@ -1203,131 +1137,333 @@ function setupFilters() {
 }
 
 
-/* =====================================================
-   COURSE SEARCH
-===================================================== */
+function updateCareerChipState() {
 
-function setupCourseSearch() {
+    careerChips.forEach(chip => {
 
-    document
-        .getElementById("courseSearch")
-        .addEventListener(
-            "input",
-            renderCourses
+        const career =
+            chip.dataset.career;
+
+        chip.classList.toggle(
+            "selected",
+            selectedCareers.includes(career)
         );
+
+    });
 
 }
 
 
-/* =====================================================
+careerChips.forEach(chip => {
+
+    chip.addEventListener("click", () => {
+
+        const career =
+            chip.dataset.career;
+
+
+        /* Remove if already selected */
+
+        if (selectedCareers.includes(career)) {
+
+            selectedCareers =
+                selectedCareers.filter(
+                    item => item !== career
+                );
+
+        }
+
+        /* Add new career */
+
+        else {
+
+            if (selectedCareers.length >= 3) {
+
+                alert(
+                    "You can select a maximum of 3 career goals."
+                );
+
+                return;
+            }
+
+            selectedCareers.push(career);
+
+        }
+
+
+        updateCareerChipState();
+
+        updateSelectedCareers();
+
+    });
+
+});
+
+
+/* =========================================================
+   GENERATE CAREER PATH
+   ========================================================= */
+
+document
+    .getElementById("generateBtn")
+    .addEventListener("click", generatePath);
+
+
+function generatePath() {
+
+    if (selectedCareers.length === 0) {
+
+        alert(
+            "Please select at least one career goal."
+        );
+
+        return;
+    }
+
+
+    const selectedData =
+        selectedCareers.map(
+            career => careerData[career]
+        );
+
+
+    const averageScore =
+        Math.round(
+            selectedData.reduce(
+                (total, item) =>
+                    total + item.score,
+                0
+            ) / selectedData.length
+        );
+
+
+    const allSkills = [
+
+        ...new Set(
+            selectedData.flatMap(
+                item => item.skills
+            )
+        )
+
+    ];
+
+
+    const descriptions =
+        selectedCareers.join(" + ");
+
+
+    document.getElementById("matchTitle")
+        .textContent = descriptions;
+
+
+    document.getElementById("matchScore")
+        .textContent = averageScore;
+
+
+    document.getElementById("matchDescription")
+        .textContent =
+        selectedCareers.length === 1
+            ? selectedData[0].description
+            : `SkillBridge AI has combined your ${selectedCareers.length} career goals into one learning path covering the common and complementary skills required for ${descriptions}.`;
+
+
+    const skillTags =
+        document.getElementById("skillTags");
+
+    skillTags.innerHTML = "";
+
+
+    allSkills.slice(0, 12).forEach(skill => {
+
+        const span =
+            document.createElement("span");
+
+        span.textContent = skill;
+
+        skillTags.appendChild(span);
+
+    });
+
+
+    /* Scroll to career match */
+
+    document
+        .getElementById("career-match")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+
+    /* Update courses according to selected careers */
+
+    renderCourses();
+
+}
+
+
+/* =========================================================
+   COURSE FILTER
+   ========================================================= */
+
+let activeFilter = "all";
+
+
+const filterButtons =
+    document.querySelectorAll(".filter");
+
+
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        filterButtons.forEach(btn =>
+            btn.classList.remove("active")
+        );
+
+        button.classList.add("active");
+
+        activeFilter =
+            button.dataset.filter;
+
+        renderCourses();
+
+    });
+
+});
+
+
+/* =========================================================
+   COURSE SEARCH
+   ========================================================= */
+
+const searchInput =
+    document.getElementById("courseSearch");
+
+
+searchInput.addEventListener(
+    "input",
+    renderCourses
+);
+
+
+/* =========================================================
    RENDER COURSES
-===================================================== */
+   ========================================================= */
 
 function renderCourses() {
 
     const grid =
         document.getElementById("courseGrid");
 
-    const empty =
-        document.getElementById("emptyState");
+    const noCourses =
+        document.getElementById("noCourses");
+
+    const count =
+        document.getElementById("courseCount");
+
 
     const search =
-        document
-            .getElementById("courseSearch")
-            .value
+        searchInput.value
             .toLowerCase()
             .trim();
 
 
-    let results =
+    let filteredCourses =
         courses.filter(course => {
-
-            /* Career recommendation */
-
-            const careerMatch =
-                course.careers.includes(
-                    selectedCareer
-                );
 
 
             /* Search */
 
-            const searchable =
-                (
-                    course.title +
-                    " " +
-                    course.platform +
-                    " " +
-                    course.skills.join(" ")
-                ).toLowerCase();
+            const searchableText = [
 
-            const searchMatch =
+                course.platform,
+                course.title,
+                course.description,
+                course.location,
+                ...course.skills,
+                ...course.careers
+
+            ]
+                .join(" ")
+                .toLowerCase();
+
+
+            const matchesSearch =
                 !search ||
-                searchable.includes(search);
+                searchableText.includes(search);
 
 
             /* Filter */
 
-            let filterMatch = true;
+            let matchesFilter = true;
 
 
             if (activeFilter === "free") {
 
-                filterMatch =
+                matchesFilter =
                     course.type === "free";
 
             }
 
+
             else if (activeFilter === "paid") {
 
-                filterMatch =
+                matchesFilter =
                     course.type === "paid";
 
             }
 
+
             else if (
-                activeFilter === "government" ||
-                activeFilter === "university" ||
-                activeFilter === "industry"
+                ["government", "university", "industry"]
+                    .includes(activeFilter)
             ) {
 
-                filterMatch =
+                matchesFilter =
                     course.category === activeFilter;
 
             }
 
 
-            return (
-                careerMatch &&
-                searchMatch &&
-                filterMatch
-            );
+            else if (
+                ["online", "offline"]
+                    .includes(activeFilter)
+            ) {
+
+                matchesFilter =
+                    course.mode === activeFilter;
+
+            }
+
+
+            return matchesSearch &&
+                   matchesFilter;
 
         });
 
 
-    /*
-       If career-specific courses are unavailable,
-       show relevant search results.
-    */
+    /* If career selected, prioritize relevant courses */
 
-    if (results.length === 0 && search) {
+    if (selectedCareers.length > 0) {
 
-        results =
-            courses.filter(course => {
+        filteredCourses.sort((a, b) => {
 
-                const searchable =
-                    (
-                        course.title +
-                        " " +
-                        course.platform +
-                        " " +
-                        course.skills.join(" ")
-                    ).toLowerCase();
+            const aMatch =
+                a.careers.some(
+                    career =>
+                        selectedCareers.includes(career)
+                );
 
-                return searchable.includes(search);
+            const bMatch =
+                b.careers.some(
+                    career =>
+                        selectedCareers.includes(career)
+                );
 
-            });
+
+            return bMatch - aMatch;
+
+        });
 
     }
 
@@ -1335,132 +1471,213 @@ function renderCourses() {
     grid.innerHTML = "";
 
 
-    results.forEach(course => {
+    count.textContent =
+        filteredCourses.length;
 
-        grid.appendChild(
-            createCourseCard(course)
-        );
+
+    if (filteredCourses.length === 0) {
+
+        noCourses.style.display =
+            "block";
+
+        return;
+
+    }
+
+
+    noCourses.style.display =
+        "none";
+
+
+    filteredCourses.forEach(course => {
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "course-card";
+
+
+        const typeLabel =
+            course.type === "free"
+                ? "FREE"
+                : "PAID";
+
+
+        const categoryLabel =
+            course.category.toUpperCase();
+
+
+        card.innerHTML = `
+
+            <div class="course-platform">
+                ${course.platform}
+            </div>
+
+            <h3>
+                ${course.title}
+            </h3>
+
+            <div class="course-badges">
+
+                <span>${typeLabel}</span>
+
+                <span>
+                    ${course.mode.toUpperCase()}
+                </span>
+
+                <span>
+                    ${categoryLabel}
+                </span>
+
+            </div>
+
+
+            <p class="course-description">
+                ${course.description}
+            </p>
+
+
+            <div class="course-info">
+
+                <div>
+
+                    <small>Duration</small>
+
+                    <strong>
+                        ${course.duration}
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <small>Fee</small>
+
+                    <strong>
+                        ${course.fee}
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <small>Mode</small>
+
+                    <strong>
+                        ${course.mode === "online"
+                            ? "Online"
+                            : "Offline"}
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <small>Location</small>
+
+                    <strong>
+                        ${course.location || "Anywhere"}
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="view-course"
+                data-id="${course.id}">
+
+                View Course
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        `;
+
+
+        grid.appendChild(card);
 
     });
 
 
-    empty.style.display =
-        results.length === 0
-            ? "block"
-            : "none";
+    document
+        .querySelectorAll(".view-course")
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    const id =
+                        Number(button.dataset.id);
+
+                    openCourseModal(id);
+
+                }
+            );
+
+        });
 
 }
 
 
-/* =====================================================
-   COURSE CARD
-===================================================== */
-
-function createCourseCard(course) {
-
-    const card =
-        document.createElement("article");
-
-    card.className = "course-card";
-
-    card.innerHTML = `
-
-        <div class="course-top">
-
-            <span class="platform">
-                ${course.platform}
-            </span>
-
-            <span class="course-type">
-                ${course.type === "free"
-                    ? "FREE"
-                    : "PAID"}
-            </span>
-
-        </div>
-
-
-        <h3>
-            ${course.title}
-        </h3>
-
-
-        <p>
-            ${course.description}
-        </p>
-
-
-        <div class="course-tags">
-
-            ${course.skills
-                .slice(0, 4)
-                .map(skill =>
-                    `<span>${skill}</span>`
-                )
-                .join("")}
-
-        </div>
-
-
-        <div class="course-meta">
-
-            <span>
-                <i class="fa-regular fa-clock"></i>
-                ${course.duration}
-            </span>
-
-            <span>
-                ${course.level}
-            </span>
-
-        </div>
-
-
-        <button
-            class="view-course-btn"
-            onclick="openCourseModal(${course.id})"
-        >
-            View Course
-            <i class="fa-solid fa-arrow-right"></i>
-        </button>
-
-    `;
-
-    return card;
-
-}
-
-
-/* =====================================================
+/* =========================================================
    COURSE MODAL
-===================================================== */
+   ========================================================= */
 
-function openCourseModal(courseId) {
+const modal =
+    document.getElementById("courseModal");
+
+
+function openCourseModal(id) {
 
     const course =
         courses.find(
-            item => item.id === courseId
+            item => item.id === id
         );
+
 
     if (!course) return;
 
 
-    document.getElementById("modalPlatform").textContent =
-        course.platform;
+    document.getElementById("modalPlatform")
+        .textContent = course.platform;
 
-    document.getElementById("modalTitle").textContent =
-        course.title;
 
-    document.getElementById("modalType").textContent =
+    document.getElementById("modalTitle")
+        .textContent = course.title;
+
+
+    document.getElementById("modalType")
+        .textContent =
         course.type === "free"
             ? "FREE"
             : "PAID";
 
-    document.getElementById("modalLevel").textContent =
+
+    document.getElementById("modalMode")
+        .textContent =
+        course.mode.toUpperCase();
+
+
+    document.getElementById("modalDuration")
+        .textContent =
+        course.duration;
+
+
+    document.getElementById("modalLevel")
+        .textContent =
         course.level;
 
-    document.getElementById("modalDuration").textContent =
-        course.duration;
+
+    document.getElementById("modalDescription")
+        .textContent =
+        course.description;
 
 
     /* Learn */
@@ -1475,8 +1692,7 @@ function openCourseModal(courseId) {
         const li =
             document.createElement("li");
 
-        li.innerHTML =
-            `<i class="fa-solid fa-check"></i> ${item}`;
+        li.textContent = item;
 
         learn.appendChild(li);
 
@@ -1485,115 +1701,70 @@ function openCourseModal(courseId) {
 
     /* Projects */
 
-    document.getElementById("modalProjectCount")
-        .textContent =
-        `(${course.projects.length})`;
-
-
-    const projectContainer =
+    const projects =
         document.getElementById("modalProjects");
 
-    projectContainer.innerHTML = "";
+    projects.innerHTML = "";
 
-    course.projects.forEach((project, index) => {
-
-        const div =
-            document.createElement("div");
-
-        div.className =
-            "project-item";
-
-        div.innerHTML = `
-
-            <strong>
-                Project ${index + 1}: ${project.title}
-            </strong>
-
-            <p>
-                ${project.description}
-            </p>
-
-        `;
-
-        projectContainer.appendChild(div);
-
-    });
-
-
-    /* Assessments */
-
-    const assessmentContainer =
-        document.getElementById(
-            "modalAssessments"
-        );
-
-    assessmentContainer.innerHTML = `
-
-        <div class="assessment-summary-card">
-
-            <strong>
-                💻 Online Assessment
-            </strong>
-
-            <span>
-                ${course.assessments.online}
-            </span>
-
-        </div>
-
-
-        <div class="assessment-summary-card">
-
-            <strong>
-                🏫 Offline Assessment
-            </strong>
-
-            <span>
-                ${course.assessments.offline}
-            </span>
-
-        </div>
-
-    `;
-
-
-    /* Requirements */
-
-    const requirements =
-        document.getElementById(
-            "modalRequirements"
-        );
-
-    requirements.innerHTML = "";
-
-    course.requirements.forEach(item => {
+    course.projects.forEach(item => {
 
         const li =
             document.createElement("li");
 
-        li.innerHTML =
-            `<i class="fa-solid fa-circle-check"></i> ${item}`;
+        li.textContent = item;
 
-        requirements.appendChild(li);
+        projects.appendChild(li);
 
     });
 
 
-    document.getElementById("startCourseBtn")
-        .onclick = () => {
-
-            showToast(
-                `${course.title} selected`
-            );
-
-            closeCourseModal();
-
-        };
+    document.getElementById("modalAssignment")
+        .textContent =
+        course.assignment;
 
 
-    document
-        .getElementById("courseModal")
-        .classList.add("show");
+    document.getElementById("modalCertification")
+        .textContent =
+        course.certification;
+
+
+    document.getElementById("modalExam")
+        .textContent =
+        course.examMode;
+
+
+    document.getElementById("modalFee")
+        .textContent =
+        `${course.fee} | Certification/Exam: ${course.certificationFee}`;
+
+
+    document.getElementById("modalRequirements")
+        .textContent =
+        course.requirements;
+
+
+    /* Skills */
+
+    const skills =
+        document.getElementById("modalSkills");
+
+    skills.innerHTML = "";
+
+
+    course.skills.forEach(skill => {
+
+        const span =
+            document.createElement("span");
+
+        span.textContent =
+            skill;
+
+        skills.appendChild(span);
+
+    });
+
+
+    modal.classList.add("show");
 
     document.body.style.overflow =
         "hidden";
@@ -1601,15 +1772,35 @@ function openCourseModal(courseId) {
 }
 
 
-/* =====================================================
+/* =========================================================
    CLOSE MODAL
-===================================================== */
+   ========================================================= */
 
-function closeCourseModal() {
+document
+    .getElementById("closeModal")
+    .addEventListener(
+        "click",
+        closeModal
+    );
 
-    document
-        .getElementById("courseModal")
-        .classList.remove("show");
+
+modal.addEventListener(
+    "click",
+    event => {
+
+        if (event.target === modal) {
+
+            closeModal();
+
+        }
+
+    }
+);
+
+
+function closeModal() {
+
+    modal.classList.remove("show");
 
     document.body.style.overflow =
         "";
@@ -1617,132 +1808,28 @@ function closeCourseModal() {
 }
 
 
+/* =========================================================
+   START LEARNING
+   ========================================================= */
+
 document
-    .getElementById("courseModal")
-    .addEventListener("click", event => {
+    .getElementById("startLearning")
+    .addEventListener(
+        "click",
+        () => {
 
-        if (
-            event.target.id === "courseModal"
-        ) {
-
-            closeCourseModal();
-
-        }
-
-    });
-
-
-/* =====================================================
-   SUGGESTIONS
-===================================================== */
-
-function setupSuggestions() {
-
-    document
-        .querySelectorAll(".suggestion")
-        .forEach(button => {
-
-            button.addEventListener("click", () => {
-
-                const role =
-                    button.dataset.role;
-
-                document
-                    .getElementById("careerInput")
-                    .value = role;
-
-                generatePath();
-
-            });
-
-        });
-
-}
-
-
-/* =====================================================
-   ASSESSMENT ACTIONS
-===================================================== */
-
-function startAssessment(type) {
-
-    if (type === "online") {
-
-        showToast(
-            "Online assessment demo started"
-        );
-
-    }
-
-    else {
-
-        showToast(
-            "Finding available offline assessment centers..."
-        );
-
-    }
-
-}
-
-
-/* =====================================================
-   TOAST
-===================================================== */
-
-function showToast(message) {
-
-    const toast =
-        document.getElementById("toast");
-
-    document.getElementById("toastText")
-        .textContent = message;
-
-    toast.classList.add("show");
-
-    clearTimeout(
-        window.toastTimer
-    );
-
-    window.toastTimer =
-        setTimeout(() => {
-
-            toast.classList.remove("show");
-
-        }, 3000);
-
-}
-
-
-/* =====================================================
-   KEYBOARD
-===================================================== */
-
-function setupKeyboard() {
-
-    document
-        .getElementById("careerInput")
-        .addEventListener("keydown", event => {
-
-            if (event.key === "Enter") {
-
-                generatePath();
-
-            }
-
-        });
-
-
-    document.addEventListener(
-        "keydown",
-        event => {
-
-            if (event.key === "Escape") {
-
-                closeCourseModal();
-
-            }
+            alert(
+                "Course learning link can be connected here."
+            );
 
         }
     );
 
-}
+
+/* =========================================================
+   INITIAL LOAD
+   ========================================================= */
+
+updateSelectedCareers();
+
+renderCourses();
